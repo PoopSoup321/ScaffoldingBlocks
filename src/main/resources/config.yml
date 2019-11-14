@@ -1,0 +1,61 @@
+# ----------------------------------------------------------------------------------------------------------------------
+# ${project.artifactId}, version ${project.version} -  Configuration file.
+# .
+# You will find an explanation of all parameters here:
+# https://github.com/arboriginal/${project.artifactId}/blob/master/src/main/resources/config.yml
+# .
+# Don't forget to setup permissions, you can read their name and description here:
+# https://github.com/arboriginal/${project.artifactId}/blob/master/src/main/resources/plugin.yml
+# .
+# Values you can use in « offHandTools », « altScaffoldings » and « ignoredBlocks »:
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# .
+# /!\ All values can't be used as alternative scaffoldings:
+# For example DIAMOND, ELYTRA, IRON_PICKAXE, ... won't work because those aren't blocks! (but they can be used as tool)
+# .
+# « You can't build the bridge of trust with the scaffolding of lies and underhand deals » (Ian Paisley)
+# « You can build a bridge above the void with Minecraft 1.14 scaffolding and my plugin » (arboriginal)
+# ----------------------------------------------------------------------------------------------------------------------
+
+falling: true # true / false.
+# If true, broken alternative scaffolding blocks turn into items when broken (classic vanilla behavior)...
+# but as items in the air / on ground are entities, you would maybe prefer false...
+# .
+# If false, items goes directly in inventory of player who breaks the blocks (if no room, remains will goes on ground).
+# It's less realistic but preferable on small server to prevent lags (again because items are entities).
+# (This could also be a choice not to loose them when you bridge above the void.)
+
+silkDrop: true # true / false.
+# If true, the alternative scaffolding blocks drops themself (like if you used a silk touch pickaxe) instead of the
+# result of their loot table (for example, a SEA_LANTERN block will drop SEA_LANTERN, not PRISMARINE_CRYSTALS)
+# .
+# If false, STONE will drop COBBLESTONE, GLASS will drop nothing, ... If you play Minecraft, you should understand :)
+
+sneakDisable: true # true / false.
+# If true, sneaking while placing the block use the normal behavior (place the block where you point).
+# Useful not to switch your off hand item, for example when bridging, each time you want to put a block up.
+
+# ----- Parameters below are lists of Spigot Materials, see the link in the header of this file. -----
+
+# List of items the player has to hold in his off hand to use alternative blocks as scaffolding.
+# Only one of them is required (because strangely in Minecraft, player have only one off hand).
+offHandTools:
+- GHAST_TEAR
+- RABBIT_FOOT
+
+# List of blocks you can use as alternative scaffolding blocks, use « alternativeBlocks: [] » to allow all blocks.
+# /!\ Remember: Player has to hold an item from « offHandTools » list in off hand + to have appropriate permission(s)
+altScaffoldings:
+- DARK_PRISMARINE  # I choose those blocks as example because they are not so common, so your player have to farm
+- DRIED_KELP_BLOCK # before to make big bridges, but you can also chhose to allow common blocks (like STONE, why not?).
+- LADDER           # Try it against a wall, it's easier than placing ladders like you have to do normally!
+
+# Those blocks will be considered as empty when placing alternative blocks.
+ignoredBlocks:
+- AIR # you should not remove this one... but once again, your choice!
+- CAVE_AIR
+- COBWEB
+- GRASS
+- SNOW
+- TALL_GRASS
+- VINE
