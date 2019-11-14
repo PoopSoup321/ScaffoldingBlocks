@@ -22,6 +22,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <spigot-api>1.14</spigot-api>
+        <spigot-id>scaffoldingblocks.403831</spigot-id>
         <spigot-main>Plugin</spigot-main>
     </properties>
 
