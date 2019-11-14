@@ -9,16 +9,16 @@ main: ${project.groupId}.${project.artifactId}.${spigot-main}
 api-version: ${spigot-api}
 
 commands:
-  se-reload:
+  sb-reload:
     description: Reload the plugin configuration
-    permission: se.reload
+    permission: sb.reload
 
 permissions:
-  se.reload:
+  sb.reload:
     description: Allows to use the /se-reload command
     default: op
 
-  se.vanilla_scaffoldings.bridge:
+  sb.vanilla_scaffoldings.bridge:
     description: Allows to create long bridges with vanilla scaffoldings
     default: false
 
@@ -27,10 +27,10 @@ permissions:
   # This prevent players to be forced to always use those behaviors when they tried to do something else ...
   # ... like ... build! (oh wait really? players build in Minecraft??? :p)
 
-  se.alt_scaffolding.break: # /!\ Doesn't prevent to break normally!
+  sb.alt_scaffolding.break: # /!\ Doesn't prevent to break normally!
     description: Allows to break alternative blocks like scaffolding (chain reaction)
     default: false
 
-  se.alt_scaffolding.place:
+  sb.alt_scaffolding.place:
     description: Allows to place alternative blocks like scaffolding (from bottom to up / from top to side)
     default: false

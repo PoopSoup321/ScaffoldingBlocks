@@ -24,13 +24,13 @@ All configuration parameters are explained in this [config.yml](https://github.c
 
 ## Commands
 
-There is only one: **/se-reload**, to reload the plugin configuration.
+There is only one: **/sb-reload**, to reload the plugin configuration.
 
 ## Permissions
 
-* **se.reload** allows to use the **/se-reload** command
-* **se.vanilla_scaffoldings.bridge** Allows to create long bridges with vanilla scaffoldings
-* **se.alt_scaffolding.break** Allows to break alternative blocks like scaffolding (chain reaction)
-* **se.alt_scaffolding.place** Allows to place alternative blocks like scaffolding (from bottom to up / from top to side)
+* **sb.reload** allows to use the **/sb-reload** command
+* **sb.vanilla_scaffoldings.bridge** Allows to create long bridges with vanilla scaffoldings
+* **sb.alt_scaffolding.break** Allows to break alternative blocks like scaffolding (chain reaction)
+* **sb.alt_scaffolding.place** Allows to place alternative blocks like scaffolding (from bottom to up / from top to side)
 
 **/!\ REMEMBER:** To use alternative blocks like scaffoldings, players need the appropriate permission(s) AND have to hold the tool item in his off hand. This prevents them to be forced to always use those particular behaviors when they're doing their classical stuffs.

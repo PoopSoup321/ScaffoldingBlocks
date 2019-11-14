@@ -37,7 +37,7 @@ class Events implements Listener {
     private void onBlockBreak(BlockBreakEvent e) {
         Player player = e.getPlayer();
         if (p.sneak && player.isSneaking()) return;
-        if (!player.hasPermission("se.alt_scaffoldings.break") || !h.holdTool(player.getInventory())) return;
+        if (!player.hasPermission("sb.alt_scaffoldings.break") || !h.holdTool(player.getInventory())) return;
 
         Block block = e.getBlock();
         if (h.locks.contains(h.lockKey(block)) || !h.isAlternative(block.getType())) return;
@@ -50,7 +50,7 @@ class Events implements Listener {
     private void onBlockPlace(BlockPlaceEvent e) {
         Block block = e.getBlock(); // @formatter:off
         if (block.getType() != Material.SCAFFOLDING
-            || !e.getPlayer().hasPermission("se.vanilla_scaffoldings.bridge")) return;
+            || !e.getPlayer().hasPermission("sb.vanilla_scaffoldings.bridge")) return;
         // @formatter:on
         Scaffolding bs = ((Scaffolding) block.getBlockData());
         if (!bs.isBottom() || bs.getDistance() < bs.getMaximumDistance()) return;
@@ -85,7 +85,7 @@ class Events implements Listener {
         if (e.getHand() != EquipmentSlot.HAND || e.getAction() != Action.RIGHT_CLICK_BLOCK) return;
 
         Player player = e.getPlayer();
-        if ((p.sneak && player.isSneaking()) || !player.hasPermission("se.alt_scaffoldings.place")) return;
+        if ((p.sneak && player.isSneaking()) || !player.hasPermission("sb.alt_scaffoldings.place")) return;
 
         int len;
 

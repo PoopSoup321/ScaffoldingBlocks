@@ -22,9 +22,9 @@ public class Plugin extends JavaPlugin {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (command.getName().equalsIgnoreCase("se-reload")) {
+        if (command.getName().equalsIgnoreCase("sb-reload")) {
             reloadConfig();
-            sender.sendMessage("§7[§6ScaffoldingExtended§7] §aConfiguration reloaded.");
+            sender.sendMessage("§7[§6ScaffoldingBlocks§7] §aConfiguration reloaded.");
             return true;
         }
 
