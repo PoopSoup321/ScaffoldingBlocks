@@ -10,18 +10,18 @@ main: ${project.groupId}.${project.artifactId}.${spigot-main}
 api-version: ${spigot-api}
 
 commands:
-  sb-reload:
+  scaffold:
     description: Reload the plugin configuration
-    permission: sb.reload
+    permission: scaffold
 
 permissions:
-  sb.reload:
-    description: Allows to use the /se-reload command
+  scaffold:
+    description: Allows to use the /scaffold command
     default: op
 
   sb.vanilla_scaffoldings.bridge:
     description: Allows to create long bridges with vanilla scaffoldings
-    default: false
+    default: true
 
   # /!\ REMEMBER: The next permissions are required for their described action (of course...)
   # But the players also have to old a specific item in off hand to use them (see « offHandTools » in config.yml).
@@ -34,4 +34,4 @@ permissions:
 
   sb.alt_scaffolding.place:
     description: Allows to place alternative blocks like scaffolding (from bottom to up / from top to side)
-    default: false
+    default: true
