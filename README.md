@@ -24,11 +24,11 @@ All configuration parameters are explained in this [config.yml](https://github.c
 
 ## Commands
 
-There is only one: **/sb-reload**, to reload the plugin configuration.
+There is only one: **/scaffold**, to reload the plugin configuration.
 
 ## Permissions
 
-* **sb.reload** allows to use the **/sb-reload** command
+* **scaffold** allows to use the **/scaffold** command
 * **sb.vanilla_scaffoldings.bridge** Allows to create long bridges with vanilla scaffoldings
 * **sb.alt_scaffolding.break** Allows to break alternative blocks like scaffolding (chain reaction)
 * **sb.alt_scaffolding.place** Allows to place alternative blocks like scaffolding (from bottom to up / from top to side)
